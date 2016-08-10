@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+  
+  <!--bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!--google places-->
+    <script src="http://maps.google.com/maps/api/js?libraries=places"></script>
+  <!--leaflet-->
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.css" />
+ 
+</head>
+<body ng-app="map">
+ 
+ <!--jquery-->
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+ <!--angularjs-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular.js"></script> 
+ <!--leaflet-->
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.js"></script>
+    <script src="http://tombatossals.github.io/angular-leaflet-directive/dist/angular-leaflet-directive.min.js"></script>
+ <!--app-->
+    <script src="app.js"></script>
+
+
+    <div class="container-fluid" ng-controller="searchMap">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 "style=" margin-top:20px;">
+          <div class="form-group">
+            <div class="input-group">
+              <span class="input-group-addon" id="basic-addon3">Location</span>
+              <input type="text" ng-modal="location" class="form-control input-lg" id="inputLocation"aria-describedby="basic-addon3">             
+            </div>
+          </div>           
+        </div>
+
+        <div class="col-md-12">
+            <leaflet lf-center="center" tiles="tile" markers="marker" width="100%" height="480px"></leaflet>
+        </div>
+      </div>
+    </div>
+
+</body>
+</html>
